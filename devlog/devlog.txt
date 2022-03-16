@@ -1,0 +1,44 @@
+3/15/2022
+Finally created a devlog. I wanted to make one now since there wasn't
+much to talk about given how little I knew about the languages, the frameworks
+and the project. Now that I have some knowledge to work with, I can start
+tackling this project bit by bit.
+
+Before I continue, I'll likely format this devlog using one text document,
+each entry separated by the date of the entry. The following entries are things
+related to this technical assessment that I've done leading up to this point.
+
+----------------------------------------------------------------------------------
+PREVIOUS ENTRIES
+3/8/2022
+Set up the technical assessment in VSCode and created a GitHub repository with an
+initial commit.
+
+The last time I used JavaScript was last year when creating a full-stack website
+with React as a framework for the front-end. I would need to spend some time learning
+and reviewing before I begin actually tackling this project.
+
+I had lots of classwork to focus on this week, and wanted to focus on this and next
+week's homework so I have time next week just to focus on this assessment.
+
+3/12/2022
+Began learning JavaScript. Link for course below:
+https://www.linkedin.com/learning/javascript-essential-training?u=56674649
+
+Finished first 5 chapters (Intro, Setting Up JS, Objects, Template Literals, and DOM)
+
+3/13/2022
+Continued learning JavaScript.
+Finished next 3 chapters (Variables, Arrays, Functions/Methods)
+
+3/14/2022
+Finished learning JavaScript. (Event Handling, Troubleshooting/Debugging JS)
+
+Throughout the course, I wrote my own library of "lines" that I may need to
+refer to in case I forget syntax. For example, I have written down
+
+
+----------------------------------------------------------------------------------
+3/15/2022
+Began learning Angular. Link for course below:
+https://www.linkedin.com/learning/angular-essential-training-2?u=56674649
