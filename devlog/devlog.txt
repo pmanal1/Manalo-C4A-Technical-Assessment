@@ -62,3 +62,8 @@ included to route back to the heroes list.
 
 With Task 1 partially finished (need to implement backend for Task 1), I will move on to Task 2 by
 generating a component that routes from the root component.
+
+I was stuck with accessing the backend through the add-hero component, so I decided to create a
+service for the hero components that does all the work while the components simply display elements
+to the browser. I did however add a feature to the add-hero component that erases the input values
+when you click the "Add Hero" button.

@@ -17,6 +17,10 @@ export class AddHeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  add(heroName: string, heroClass: string, level: number): void {
+
+  }
+  
   goBack(): void {
     this.location.back();
   }
