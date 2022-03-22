@@ -11,6 +11,7 @@ import { fakeHeroList } from '../fake-heroes-list';
 export class HeroesListComponent implements OnInit {
 
   heroes: Hero[] = [];
+  selectedHero?: Hero;
 
   constructor(private backend: BackendService) { }
 
@@ -24,4 +25,7 @@ export class HeroesListComponent implements OnInit {
     this.heroes = fakeHeroList;
   }
 
+  onClick(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }

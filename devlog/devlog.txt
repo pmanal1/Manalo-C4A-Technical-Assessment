@@ -49,3 +49,7 @@ Finished Angular tutorials, starting technical assessment.
 There are no heroes in the database, so I will create a fake list of heroes to start task 1.
 I will utilize the database in task 2 where I will switch from the fake list of heroes to the
 database.
+
+With the fake list, I'd like to display the details of the hero when I click on that specific hero.
+For now, this will temporarily be displayed below the list, but I might add routing to separate
+the list and the details.
