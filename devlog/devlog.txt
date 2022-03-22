@@ -51,5 +51,8 @@ I will utilize the database in task 2 where I will switch from the fake list of 
 database.
 
 With the fake list, I'd like to display the details of the hero when I click on that specific hero.
-For now, this will temporarily be displayed below the list, but I might add routing to separate
-the list and the details.
+For now, this will temporarily be displayed below the list, but I will add routing to separate
+the list and the details later.
+
+I will now refactor the hero details into a separate component. I'm also thinking of creating a service
+for the components, but that will be after I make this hero details component.
