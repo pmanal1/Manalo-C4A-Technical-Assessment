@@ -56,3 +56,6 @@ the list and the details later.
 
 I will now refactor the hero details into a separate component. I'm also thinking of creating a service
 for the components, but that will be after I make this hero details component.
+
+With a separate component, I will now add routing to separate the two components. A back button is
+included to route back to the heroes list.

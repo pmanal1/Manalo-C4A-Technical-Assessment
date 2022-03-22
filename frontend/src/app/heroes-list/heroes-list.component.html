@@ -2,7 +2,7 @@
 <ul>
     <!--Displays a list of hero names-->
     <li *ngFor="let hero of heroes">
-        <button (click)="onClick(hero)">{{hero.name}}</button>
+        <button routerLink="/heroDetail/{{hero.id}}">{{hero.name}}</button>
     </li>
 </ul>
 
