@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../services/backend.service';
 import { Hero } from '../types/Hero';
+import { fakeHeroList } from '../fake-heroes-list';
 
 @Component({
   selector: 'app-heroes-list',
@@ -15,7 +16,12 @@ export class HeroesListComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     // Gets a list of heroes to display
-    this.heroes = await this.backend.getHeroes();
+    // this.heroes = await this.backend.getHeroes();
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroes = fakeHeroList;
   }
 
 }

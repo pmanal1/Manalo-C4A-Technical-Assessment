@@ -42,3 +42,10 @@ refer to in case I forget syntax. For example, I have written down
 3/15/2022
 Began learning Angular. Link for course below:
 https://www.linkedin.com/learning/angular-essential-training-2?u=56674649
+
+3/22/2022
+Finished Angular tutorials, starting technical assessment.
+
+There are no heroes in the database, so I will create a fake list of heroes to start task 1.
+I will utilize the database in task 2 where I will switch from the fake list of heroes to the
+database.
