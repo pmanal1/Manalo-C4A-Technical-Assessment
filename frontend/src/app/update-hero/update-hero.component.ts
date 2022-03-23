@@ -1,15 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Hero } from '../types/Hero';
 import { Location } from '@angular/common';
+import { Hero } from '../types/Hero';
+import { ActivatedRoute } from '@angular/router';
 import { BackendService } from '../services/backend.service';
 
 @Component({
-  selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.css']
+  selector: 'app-update-hero',
+  templateUrl: './update-hero.component.html',
+  styleUrls: ['./update-hero.component.css']
 })
-export class HeroDetailComponent implements OnInit {
+export class UpdateHeroComponent implements OnInit {
   @Input() hero?: Hero;
 
   constructor(
@@ -29,6 +29,12 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    if(this.hero) {
+      this.backendService.updateHero(this.hero).subscribe(() => this.goBack())
+    }
   }
 
 }

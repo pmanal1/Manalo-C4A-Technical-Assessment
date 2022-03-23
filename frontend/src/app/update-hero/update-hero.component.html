@@ -1,0 +1,30 @@
+<div *ngIf="hero">
+    <h2>Current {{hero.name}} Details</h2>
+    <p>Class: {{hero.class}}</p>
+    <p>Level: {{hero.level}}</p>
+</div>
+
+
+<div *ngIf = "hero">
+    <label>New Hero Name: </label>
+    <input #heroName [(ngModel)]="hero.name"/>
+    <br />
+
+    <label>New Hero Class: </label>
+    <input #heroClass [(ngModel)]="hero.class" />
+    <br />
+
+    <label>New Hero Level: </label>
+    <input type="number" #heroLevel [(ngModel)]="hero.level" />
+    <br />
+
+    <button (click)=" save();
+    heroName.value='';
+    heroClass.value='';
+    heroLevel.value=''">
+    Update Hero
+    </button>
+</div>
+
+<button (click)="goBack()">Back</button>
+

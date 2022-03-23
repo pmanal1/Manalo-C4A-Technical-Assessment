@@ -7,18 +7,22 @@ import { AppComponent } from './app.component';
 import { HeroesListComponent } from './heroes-list/heroes-list.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AddHeroComponent } from './add-hero/add-hero.component';
+import { UpdateHeroComponent } from './update-hero/update-hero.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesListComponent,
     HeroDetailComponent,
-    AddHeroComponent
+    AddHeroComponent,
+    UpdateHeroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

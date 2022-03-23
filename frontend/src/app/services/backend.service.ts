@@ -39,7 +39,9 @@ export class BackendService {
     return this.http.post<Hero>(`${environment.api}/heroes`, hero);
   } 
 
-
+  updateHero(hero: Hero): Observable<ArrayBuffer> {
+    return this.http.patch<ArrayBuffer>(`${environment.api}/heroes/${hero.id}`, hero);
+  }
 
   getNewID(): string {
     const lastHero = fakeHeroList.pop()!;
