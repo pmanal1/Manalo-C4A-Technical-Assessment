@@ -76,3 +76,6 @@ fields and posting them to the database, the ID changes. It goes from a single d
 of hexadecimals. I'm not sure why this occurs, but the application continues to work. The only problem
 would be that deleting and updating may become more of a hassle if an ID is required to specify deletion
 of a hero.
+
+Adding the update-hero method was trivial, the only problems were forgetting to add the ngIf directives
+where needed to allow compilation. The next step is to delete a hero.

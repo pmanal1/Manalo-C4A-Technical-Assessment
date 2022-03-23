@@ -1,0 +1,11 @@
+<div *ngIf="hero">
+    <p>Are you sure you want to delete this hero?</p>
+    <p>Details</p>
+    <p>Hero Name: {{hero.name}}</p>
+    <p>Hero Class: {{hero.class}}</p>
+    <p>Hero Level: {{hero.level}}</p>
+
+    <button (click)="goBack()">Back</button>
+    <button (click)="delete(hero); goBack()">Delete</button>
+</div>
+

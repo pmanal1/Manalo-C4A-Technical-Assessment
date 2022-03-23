@@ -43,6 +43,10 @@ export class BackendService {
     return this.http.patch<ArrayBuffer>(`${environment.api}/heroes/${hero.id}`, hero);
   }
 
+  deleteHero(hero: Hero): Observable<Hero> {
+    return this.http.delete<Hero>(`${environment.api}/heroes/${hero.id}`);
+  }
+
   getNewID(): string {
     const lastHero = fakeHeroList.pop()!;
     fakeHeroList.push(lastHero);

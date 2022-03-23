@@ -9,6 +9,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AddHeroComponent } from './add-hero/add-hero.component';
 import { UpdateHeroComponent } from './update-hero/update-hero.component';
 import { FormsModule } from '@angular/forms';
+import { DeleteHeroComponent } from './delete-hero/delete-hero.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     HeroesListComponent,
     HeroDetailComponent,
     AddHeroComponent,
-    UpdateHeroComponent
+    UpdateHeroComponent,
+    DeleteHeroComponent
   ],
   imports: [
     BrowserModule,
