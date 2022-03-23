@@ -67,3 +67,12 @@ I was stuck with accessing the backend through the add-hero component, so I deci
 service for the hero components that does all the work while the components simply display elements
 to the browser. I did however add a feature to the add-hero component that erases the input values
 when you click the "Add Hero" button.
+
+So far, I have updated the backend service to include methods that will be useful for the hero
+components to access and retrieve data from the backend. Of course, I have injected the service into
+all the components that I have so far. 
+Currently, there was a problem with adding new heroes to the database. When filling out the required
+fields and posting them to the database, the ID changes. It goes from a single digit string to a string
+of hexadecimals. I'm not sure why this occurs, but the application continues to work. The only problem
+would be that deleting and updating may become more of a hassle if an ID is required to specify deletion
+of a hero.

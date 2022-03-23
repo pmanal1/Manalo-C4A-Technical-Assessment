@@ -13,19 +13,24 @@ export class HeroesListComponent implements OnInit {
   heroes: Hero[] = [];
   selectedHero?: Hero;
 
-  constructor(private backend: BackendService) { }
+  constructor(
+    private backend: BackendService,
+    ) { }
 
   async ngOnInit(): Promise<void> {
     // Gets a list of heroes to display
     // this.heroes = await this.backend.getHeroes();
     this.getHeroes();
+
   }
 
   getHeroes(): void {
-    this.heroes = fakeHeroList;
+    this.backend.getHeroesReal().subscribe(heroes => {this.heroes = heroes; console.log(this.heroes);});
+    
   }
 
   onClick(hero: Hero): void {
     this.selectedHero = hero;
+    
   }
 }

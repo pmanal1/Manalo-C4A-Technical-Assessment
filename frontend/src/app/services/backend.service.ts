@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Hero } from '../types/Hero';
+import { fakeHeroList } from '../fake-heroes-list';
+import { Observable, of } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackendService {
+
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
   constructor(private http: HttpClient) { }
 
@@ -15,7 +22,31 @@ export class BackendService {
    * 
    * @returns An array of heroes
    */
-  getHeroes(): Promise<Hero[]> {
-    return this.http.get<Hero[]>(`${environment.api}/heroes`).toPromise();
+  getHeroesReal(): Observable<Hero[]> {
+    return this.http.get<Hero[]>(`${environment.api}/heroes`);
+  }
+
+  getHeroes(): Hero[] {
+    // return this.http.get<Hero[]>(`${environment.api}/heroes`);
+    return fakeHeroList;
+  }
+
+  getHero(heroID: string): Observable<Hero> {
+    return this.http.get<Hero>(`${environment.api}/heroes/${heroID}`);
+  }
+
+  addHeroes(hero: Hero): Observable<Hero> {
+    return this.http.post<Hero>(`${environment.api}/heroes`, hero);
+  } 
+
+
+
+  getNewID(): string {
+    const lastHero = fakeHeroList.pop()!;
+    fakeHeroList.push(lastHero);
+    let lastHeroNum = +lastHero.id+1;
+
+    return lastHeroNum.toString();
+
   }
 }

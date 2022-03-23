@@ -8,10 +8,10 @@
     <br />
 
     <label>Hero Level: </label>
-    <input #heroLevel />
+    <input type="number" #heroLevel />
     <br />
 
-    <button (click)="
+    <button (click)="add(heroName.value, heroClass.value, +heroLevel.value);
     heroName.value='';
     heroClass.value='';
     heroLevel.value=''">
